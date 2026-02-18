@@ -1,0 +1,15 @@
+extends common/layout
+
+block layout-content 
+  .main-content 
+    h1.page-title Movies
+    each movie in movies
+      div
+        h2= movie.title
+        p Year: #{movie.year}
+        p Rating: #{movie.rating}
+        hr
+
+    a(href="/update") Update Rating
+    br
+    a(href="/delete") Delete R Rated Movies
